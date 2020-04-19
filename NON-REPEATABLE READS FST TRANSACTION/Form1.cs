@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace READ_COMMITED_FST_TRANSACTION
+namespace NON_REPEATABLE_READS_FST_TRANSACTION
 {
     public partial class Form1 : Form
     {

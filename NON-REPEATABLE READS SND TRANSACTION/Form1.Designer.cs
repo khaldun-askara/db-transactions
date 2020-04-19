@@ -1,4 +1,4 @@
-﻿namespace READ_COMMITED_SND_TRANSACTION
+﻿namespace NON_REPEATABLE_READS_SND_TRANSACTION
 {
     partial class Form1
     {
@@ -62,7 +62,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_1);
             this.Name = "Form1";
-            this.Text = "READ COMMITED SND TRANSACTION";
+            this.Text = "NON-REPEATABLE READS SND TRANSACTION";
             this.ResumeLayout(false);
             this.PerformLayout();
 

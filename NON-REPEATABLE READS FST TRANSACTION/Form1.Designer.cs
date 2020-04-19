@@ -1,4 +1,4 @@
-﻿namespace READ_COMMITED_FST_TRANSACTION
+﻿namespace NON_REPEATABLE_READS_FST_TRANSACTION
 {
     partial class Form1
     {
@@ -165,7 +165,7 @@
             this.ClientSize = new System.Drawing.Size(1239, 692);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
-            this.Text = "READ COMMITED FST TRANSACTION";
+            this.Text = "NON-REPEATABLE READS FST TRANSACTION";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

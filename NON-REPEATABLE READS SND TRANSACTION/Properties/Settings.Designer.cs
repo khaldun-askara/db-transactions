@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace READ_COMMITED_SND_TRANSACTION.Properties
+namespace NON_REPEATABLE_READS_SND_TRANSACTION.Properties
 {
 
 

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace READ_COMMITED_FST_TRANSACTION.Properties
+namespace NON_REPEATABLE_READS_FST_TRANSACTION.Properties
 {
 
 
@@ -44,7 +44,7 @@ namespace READ_COMMITED_FST_TRANSACTION.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("READ_COMMITED_FST_TRANSACTION.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("NON_REPEATABLE_READS_FST_TRANSACTION.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

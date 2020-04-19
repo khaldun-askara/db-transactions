@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace READ_COMMITED_FST_TRANSACTION
+namespace NON_REPEATABLE_READS_SND_TRANSACTION
 {
     static class Program
     {
