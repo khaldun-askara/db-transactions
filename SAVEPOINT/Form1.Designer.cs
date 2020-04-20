@@ -37,8 +37,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btn_start = new System.Windows.Forms.Button();
             this.btn_ROLLBACKTO = new System.Windows.Forms.Button();
+            this.btn_start = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -48,7 +48,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(699, 175);
+            this.label4.Location = new System.Drawing.Point(715, 187);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(280, 51);
             this.label4.TabIndex = 8;
@@ -58,7 +58,7 @@
             // btn_2000
             // 
             this.btn_2000.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_2000.Location = new System.Drawing.Point(584, 175);
+            this.btn_2000.Location = new System.Drawing.Point(592, 187);
             this.btn_2000.Name = "btn_2000";
             this.btn_2000.Size = new System.Drawing.Size(109, 60);
             this.btn_2000.TabIndex = 7;
@@ -70,7 +70,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(277, 22);
+            this.label3.Location = new System.Drawing.Point(280, 22);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(601, 51);
             this.label3.TabIndex = 6;
@@ -81,7 +81,7 @@
             // 
             this.btn_ROLLBACK.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_ROLLBACK.AutoSize = true;
-            this.btn_ROLLBACK.Location = new System.Drawing.Point(392, 253);
+            this.btn_ROLLBACK.Location = new System.Drawing.Point(377, 264);
             this.btn_ROLLBACK.Name = "btn_ROLLBACK";
             this.btn_ROLLBACK.Size = new System.Drawing.Size(176, 60);
             this.btn_ROLLBACK.TabIndex = 5;
@@ -93,7 +93,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(290, 175);
+            this.label1.Location = new System.Drawing.Point(290, 187);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(276, 51);
             this.label1.TabIndex = 1;
@@ -103,7 +103,7 @@
             // btn_1000
             // 
             this.btn_1000.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_1000.Location = new System.Drawing.Point(175, 175);
+            this.btn_1000.Location = new System.Drawing.Point(167, 187);
             this.btn_1000.Name = "btn_1000";
             this.btn_1000.Size = new System.Drawing.Size(109, 60);
             this.btn_1000.TabIndex = 3;
@@ -153,31 +153,31 @@
             this.panel1.Size = new System.Drawing.Size(1154, 336);
             this.panel1.TabIndex = 5;
             // 
-            // btn_start
-            // 
-            this.btn_start.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_start.AutoSize = true;
-            this.btn_start.Location = new System.Drawing.Point(321, 93);
-            this.btn_start.Name = "btn_start";
-            this.btn_start.Size = new System.Drawing.Size(513, 61);
-            this.btn_start.TabIndex = 9;
-            this.btn_start.Text = "UPDATE branch SET branch_phone = \'test2\' WHERE branch_address = \'test\';\r\nSELECT *" +
-    " FROM branch;\r\nSAVEPOINT test2;\r\n";
-            this.btn_start.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_start.UseVisualStyleBackColor = true;
-            this.btn_start.Click += new System.EventHandler(this.button1_Click);
-            // 
             // btn_ROLLBACKTO
             // 
             this.btn_ROLLBACKTO.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_ROLLBACKTO.AutoSize = true;
-            this.btn_ROLLBACKTO.Location = new System.Drawing.Point(586, 253);
+            this.btn_ROLLBACKTO.Location = new System.Drawing.Point(601, 264);
             this.btn_ROLLBACKTO.Name = "btn_ROLLBACKTO";
             this.btn_ROLLBACKTO.Size = new System.Drawing.Size(176, 60);
             this.btn_ROLLBACKTO.TabIndex = 12;
             this.btn_ROLLBACKTO.Text = "ROLLBACK TO test2;\r\nSELECT * FROM branch;";
             this.btn_ROLLBACKTO.UseVisualStyleBackColor = true;
             this.btn_ROLLBACKTO.Click += new System.EventHandler(this.btnres2_Click);
+            // 
+            // btn_start
+            // 
+            this.btn_start.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_start.AutoSize = true;
+            this.btn_start.Location = new System.Drawing.Point(337, 92);
+            this.btn_start.Name = "btn_start";
+            this.btn_start.Size = new System.Drawing.Size(513, 78);
+            this.btn_start.TabIndex = 9;
+            this.btn_start.Text = "BEGIN TRANSACTION;\r\nUPDATE branch SET branch_phone = \'test2\' WHERE branch_address" +
+    " = \'test\';\r\nSELECT * FROM branch;\r\nSAVEPOINT test2;\r\n";
+            this.btn_start.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_start.UseVisualStyleBackColor = true;
+            this.btn_start.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 

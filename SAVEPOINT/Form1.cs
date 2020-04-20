@@ -37,6 +37,8 @@ namespace SAVEPOINT
                 using (var sCommand = new NpgsqlCommand())
                 {
                     sCommand.Connection = sConn;
+                    sCommand.CommandText = "DELETE FROM branch WHERE branch_address = 'test' OR branch_address = 'test2'";
+                    sCommand.ExecuteNonQuery();
                     sCommand.CommandText = "INSERT INTO branch (branch_address, branch_phone, branch_area, branch_working_hours) VALUES ('test', 'test', 100, 'test'); SELECT * FROM branch";
                     datasource_for_dgv.Clear();
                     datasource_for_dgv.Load(sCommand.ExecuteReader());
@@ -111,6 +113,8 @@ namespace SAVEPOINT
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (transaction != null)
+                try { transaction.Rollback(); } catch (Exception excp) { }
             using (var sConn = new NpgsqlConnection(_sConnStr))
             {
                 sConn.Open();

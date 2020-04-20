@@ -37,7 +37,9 @@ namespace SERIALIZATION_ANIMALY_FST_TRANSACTION
                 using (var sCommand = new NpgsqlCommand())
                 {
                     sCommand.Connection = sConn;
-                    sCommand.CommandText = "INSERT INTO branch (branch_address, branch_phone, branch_area, branch_working_hours) VALUES ('test', 'test', 100, 'test');";
+                    sCommand.CommandText = "DELETE FROM branch WHERE branch_address = 'test' OR branch_address = 'test2' OR branch_address = 'test1'";
+                    sCommand.ExecuteNonQuery();
+                    sCommand.CommandText = "INSERT INTO branch (branch_address, branch_phone, branch_area, branch_working_hours) VALUES('test', 'test', 100, 'test'), ('test1', 'test1', 100, 'test'); ";
                     sCommand.ExecuteNonQuery();
                 }
             }
@@ -55,6 +57,8 @@ namespace SERIALIZATION_ANIMALY_FST_TRANSACTION
             sCommand.Connection = sConn;
             transaction = sConn.BeginTransaction(IsolationLevel.RepeatableRead);
             sCommand.Transaction = transaction;
+            sCommand.CommandText = "SELECT COUNT(*) FROM branch WHERE branch_phone = 'test';";
+            sCommand.ExecuteScalar();
             sCommand.CommandText = "SELECT * FROM branch;";
             datasource_for_dgv.Clear();
             datasource_for_dgv.Load(sCommand.ExecuteReader());
@@ -64,7 +68,7 @@ namespace SERIALIZATION_ANIMALY_FST_TRANSACTION
         {
             btn_2.Enabled = false;
             btn_4.Enabled = true;
-            sCommand.CommandText = "UPDATE branch SET branch_area = branch_area+100; SELECT * FROM branch;";
+            sCommand.CommandText = "INSERT INTO branch (branch_address, branch_phone, branch_area, branch_working_hours) VALUES ('test2', 'test1', 100, 'test'); SELECT * FROM branch;";
             datasource_for_dgv.Clear();
             datasource_for_dgv.Load(sCommand.ExecuteReader());
             //transaction.Commit();
@@ -95,6 +99,8 @@ namespace SERIALIZATION_ANIMALY_FST_TRANSACTION
             sCommand.Connection = sConn;
             transaction = sConn.BeginTransaction(IsolationLevel.Serializable);
             sCommand.Transaction = transaction;
+            sCommand.CommandText = "SELECT COUNT(*) FROM branch WHERE branch_phone = 'test';";
+            sCommand.ExecuteScalar();
             sCommand.CommandText = "SELECT * FROM branch;";
             datasource_for_dgv.Clear();
             datasource_for_dgv.Load(sCommand.ExecuteReader());
@@ -105,8 +111,15 @@ namespace SERIALIZATION_ANIMALY_FST_TRANSACTION
             btn_4.Enabled = false;
             sCommand.CommandText = "SELECT * FROM branch;";
             datasource_for_dgv.Clear();
-            datasource_for_dgv.Load(sCommand.ExecuteReader());
-            transaction.Commit();
+            try
+            {
+                datasource_for_dgv.Load(sCommand.ExecuteReader());
+                transaction.Commit();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

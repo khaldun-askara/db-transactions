@@ -37,6 +37,8 @@ namespace NON_REPEATABLE_READS_FST_TRANSACTION
                 using (var sCommand = new NpgsqlCommand())
                 {
                     sCommand.Connection = sConn;
+                    sCommand.CommandText = "DELETE FROM branch WHERE branch_address = 'test' OR branch_address = 'test2'";
+                    sCommand.ExecuteNonQuery();
                     sCommand.CommandText = "INSERT INTO branch (branch_address, branch_phone, branch_area, branch_working_hours) VALUES ('test', 'test', 100, 'test');";
                     sCommand.ExecuteNonQuery();
                 }

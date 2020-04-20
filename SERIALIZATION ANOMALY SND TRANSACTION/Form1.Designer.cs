@@ -28,60 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
-            this.btn_1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btn_2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_4 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btn_3 = new System.Windows.Forms.Button();
+            this.btn_2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(277, 85);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(416, 34);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "BEGIN TRANSACTION ISOLATION LEVEL REPEATABLE READ;\r\nSELECT * FROM branch;\r\n";
-            // 
-            // btn_1
-            // 
-            this.btn_1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_1.Location = new System.Drawing.Point(162, 63);
-            this.btn_1.Name = "btn_1";
-            this.btn_1.Size = new System.Drawing.Size(109, 60);
-            this.btn_1.TabIndex = 6;
-            this.btn_1.Text = "Выполнить";
-            this.btn_1.UseVisualStyleBackColor = true;
-            this.btn_1.Click += new System.EventHandler(this.btn_1_Click);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(277, 145);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(601, 68);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "INSERT INTO branch (branch_address, branch_phone, branch_area, branch_working_hou" +
-    "rs)\r\nVALUES (\'test2\', \'test2\', 100, \'test2\');\r\n--SELECT * FROM branch;\r\nCOMMIT;";
-            // 
-            // btn_2
-            // 
-            this.btn_2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_2.Location = new System.Drawing.Point(162, 145);
-            this.btn_2.Name = "btn_2";
-            this.btn_2.Size = new System.Drawing.Size(109, 60);
-            this.btn_2.TabIndex = 8;
-            this.btn_2.Text = "Выполнить";
-            this.btn_2.UseVisualStyleBackColor = true;
-            this.btn_2.Click += new System.EventHandler(this.button1_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -95,37 +56,128 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1046, 585);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1302, 606);
             this.tableLayoutPanel1.TabIndex = 10;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 295);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 306);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1040, 287);
+            this.dataGridView1.Size = new System.Drawing.Size(1296, 297);
             this.dataGridView1.TabIndex = 0;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.btn_4);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.btn_3);
             this.panel1.Controls.Add(this.btn_2);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btn_1);
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1040, 286);
+            this.panel1.Size = new System.Drawing.Size(1296, 297);
             this.panel1.TabIndex = 5;
+            // 
+            // btn_4
+            // 
+            this.btn_4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_4.Location = new System.Drawing.Point(433, 196);
+            this.btn_4.Name = "btn_4";
+            this.btn_4.Size = new System.Drawing.Size(109, 60);
+            this.btn_4.TabIndex = 18;
+            this.btn_4.Text = "Выполнить";
+            this.btn_4.UseVisualStyleBackColor = true;
+            this.btn_4.Click += new System.EventHandler(this.btn_4_Click);
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(564, 209);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(166, 34);
+            this.label5.TabIndex = 17;
+            this.label5.Text = "SELECT * FROM branch;\r\nCOMMIT;\r\n";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(774, 50);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(429, 51);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "BEGIN TRANSACTION ISOLATION LEVEL SERIALIZABLE;\r\nSELECT COUNT (*) FROM branch WHE" +
+    "RE branch_phone = \'test1\'\r\nSELECT * FROM branch;";
+            // 
+            // btn_3
+            // 
+            this.btn_3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_3.Location = new System.Drawing.Point(659, 41);
+            this.btn_3.Name = "btn_3";
+            this.btn_3.Size = new System.Drawing.Size(109, 60);
+            this.btn_3.TabIndex = 15;
+            this.btn_3.Text = "Выполнить";
+            this.btn_3.UseVisualStyleBackColor = true;
+            this.btn_3.Click += new System.EventHandler(this.btn_3_Click);
+            // 
+            // btn_2
+            // 
+            this.btn_2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_2.Location = new System.Drawing.Point(433, 130);
+            this.btn_2.Name = "btn_2";
+            this.btn_2.Size = new System.Drawing.Size(109, 60);
+            this.btn_2.TabIndex = 14;
+            this.btn_2.Text = "Выполнить";
+            this.btn_2.UseVisualStyleBackColor = true;
+            this.btn_2.Click += new System.EventHandler(this.btn_2_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(217, 50);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(433, 51);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "BEGIN TRANSACTION ISOLATION LEVEL REPEATABLE READ;\r\nSELECT COUNT (*) FROM branch " +
+    "WHERE branch_phone = \'test1\';\r\nSELECT * FROM branch;";
+            // 
+            // btn_1
+            // 
+            this.btn_1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_1.Location = new System.Drawing.Point(102, 41);
+            this.btn_1.Name = "btn_1";
+            this.btn_1.Size = new System.Drawing.Size(109, 60);
+            this.btn_1.TabIndex = 13;
+            this.btn_1.Text = "Выполнить";
+            this.btn_1.UseVisualStyleBackColor = true;
+            this.btn_1.Click += new System.EventHandler(this.btn_1_Click);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(564, 141);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(601, 51);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "INSERT INTO branch (branch_address, branch_phone, branch_area, branch_working_hou" +
+    "rs)\r\nVALUES (\'test3\', \'test\', 100, \'test\');\r\nSELECT * FROM branch;\r\n";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1046, 585);
+            this.ClientSize = new System.Drawing.Size(1302, 606);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Form1";
             this.Text = "SERIALIZATION ANOMALY SND TRANSACTION";
@@ -139,14 +191,17 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btn_1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btn_4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btn_3;
+        private System.Windows.Forms.Button btn_2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

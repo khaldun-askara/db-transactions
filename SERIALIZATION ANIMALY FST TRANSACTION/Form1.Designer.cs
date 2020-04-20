@@ -113,11 +113,12 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(709, 107);
+            this.label4.Location = new System.Drawing.Point(709, 105);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(379, 34);
+            this.label4.Size = new System.Drawing.Size(421, 51);
             this.label4.TabIndex = 8;
-            this.label4.Text = "BEGIN TRANSACTION ISOLATION LEVEL SERIALIZABLE;\r\nSELECT * FROM branch;";
+            this.label4.Text = "BEGIN TRANSACTION ISOLATION LEVEL SERIALIZABLE;\r\nSELECT COUNT (*) FROM branch WHE" +
+    "RE branch_phone = \'test\'\r\nSELECT * FROM branch;";
             // 
             // btn_3
             // 
@@ -139,7 +140,7 @@
             this.label3.Size = new System.Drawing.Size(601, 34);
             this.label3.TabIndex = 6;
             this.label3.Text = "INSERT INTO branch (branch_address, branch_phone, branch_area, branch_working_hou" +
-    "rs)\r\nVALUES (\'test\', \'test\', 100, \'test\')";
+    "rs)\r\nVALUES (\'test\', \'test\', 100, \'test\'), (\'test1\', \'test1\', 100, \'test\');\r\n";
             // 
             // btn_2
             // 
@@ -156,11 +157,12 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(152, 107);
+            this.label1.Location = new System.Drawing.Point(152, 105);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(416, 34);
+            this.label1.Size = new System.Drawing.Size(425, 51);
             this.label1.TabIndex = 1;
-            this.label1.Text = "BEGIN TRANSACTION ISOLATION LEVEL REPEATABLE READ;\r\nSELECT * FROM branch;";
+            this.label1.Text = "BEGIN TRANSACTION ISOLATION LEVEL REPEATABLE READ;\r\nSELECT COUNT (*) FROM branch " +
+    "WHERE branch_phone = \'test\';\r\nSELECT * FROM branch;";
             // 
             // btn_1
             // 
@@ -179,9 +181,10 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(499, 196);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(361, 34);
+            this.label2.Size = new System.Drawing.Size(601, 51);
             this.label2.TabIndex = 2;
-            this.label2.Text = "UPDATE branch SET branch_area = branch_area+100;\r\nSELECT * FROM branch;\r\n";
+            this.label2.Text = "INSERT INTO branch (branch_address, branch_phone, branch_area, branch_working_hou" +
+    "rs)\r\nVALUES (\'test2\', \'test1\', 100, \'test\');\r\nSELECT * FROM branch;\r\n";
             // 
             // Form1
             // 
