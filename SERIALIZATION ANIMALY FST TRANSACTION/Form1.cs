@@ -55,7 +55,7 @@ namespace SERIALIZATION_ANIMALY_FST_TRANSACTION
             sCommand.Connection = sConn;
             transaction = sConn.BeginTransaction(IsolationLevel.RepeatableRead);
             sCommand.Transaction = transaction;
-            sCommand.CommandText = "UPDATE branch SET branch_area = branch_area+100; SELECT * FROM branch;";
+            sCommand.CommandText = "SELECT * FROM branch;";
             datasource_for_dgv.Clear();
             datasource_for_dgv.Load(sCommand.ExecuteReader());
         }
@@ -64,10 +64,10 @@ namespace SERIALIZATION_ANIMALY_FST_TRANSACTION
         {
             btn_2.Enabled = false;
             btn_4.Enabled = true;
-            sCommand.CommandText = "SELECT * FROM branch;";
+            sCommand.CommandText = "UPDATE branch SET branch_area = branch_area+100; SELECT * FROM branch;";
             datasource_for_dgv.Clear();
             datasource_for_dgv.Load(sCommand.ExecuteReader());
-            transaction.Rollback();
+            //transaction.Commit();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -103,13 +103,10 @@ namespace SERIALIZATION_ANIMALY_FST_TRANSACTION
         private void btn_4_Click(object sender, EventArgs e)
         {
             btn_4.Enabled = false;
-            sConn = new NpgsqlConnection(_sConnStr);
-            sConn.Open();
-            sCommand = new NpgsqlCommand();
-            sCommand.Connection = sConn;
             sCommand.CommandText = "SELECT * FROM branch;";
             datasource_for_dgv.Clear();
             datasource_for_dgv.Load(sCommand.ExecuteReader());
+            transaction.Commit();
         }
     }
 }

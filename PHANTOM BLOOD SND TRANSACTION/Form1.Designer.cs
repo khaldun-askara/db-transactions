@@ -43,6 +43,7 @@
             this.label2.Text = "BEGIN TRANSACTION ISOLATION LEVEL READ COMMITTED;\r\nINSERT INTO branch (branch_add" +
     "ress, branch_phone, branch_area, branch_working_hours)\r\nVALUES (\'test2\', \'test2\'" +
     ", 100, \'test2\')\r\nCOMMIT;";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btn_1
             // 
